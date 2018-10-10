@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Charts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/>
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+    
+<style>
+
+body, html {
+    height: 50%;
+    margin: 0;
+    font-family: 'Amatic SC', Arial, Helvetica, sans-serif;
+    background-color: #fff2e6;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color:  #804000;
+}
+.bg { 
+/* The image used */
+background-image: url("https://www.dropbox.com/s/r6lpowba1ohvbst/Photo%2018-6-17%2C%206%2056%2052%20PM.jpg?raw=1");
+padding: 0.5px;
+text-align: left;
+color: ghostwhite;
+font: bold 25px 'Amatic SC';
+
+/* Full height */
+height: 60%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.charts {
+  float:left;
+  width:100%;
+    opacity: 1.0;
+    text-align: center;
+    font: 15px 'Amatic SC';
+}
+
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .menu, .main, .left {
+    width:100%;
+  }
+}
+</style>
+	
+</head>
+
+<body>
+<div class="bg">
+  <h1>So what's the deal?</h1>
+</div>
+
+<div class="topnav">
+  <a href="2MainPage.html">Home</a>
+  <a href="3Charts.html">Charts</a>
+  <a href="4DealsExpiringThisWeek.html">Deals Expiring this Week!</a>
+</div>
+    
+    <div class="charts">
+    <h1>Ratings of Deals Offered by F & B Outlets</h1>
+    <iframe width="1200" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col1%2C+col6+from+1EmZEpPjVy6olbXBz7wHA4B5fUR3xC8ZlamCCtPVk+order+by+col6+desc+limit+30&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22Rating+(1%3A+Bad+to+5%3A+Fantastic)%22%2C+%22minValue%22%3A0%2C+%22maxValue%22%3A5%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3A5%2C+%22min%22%3A0%7D%2C+%22logScale%22%3Afalse%2C+%22viewWindowMode%22%3A%22explicit%22%2C+%22titleTextStyle%22%3A%7B%22color%22%3A%22%23222%22%2C+%22fontSize%22%3A12%2C+%22italic%22%3Afalse%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22logScale%22%3Afalse%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=true&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3Anull%2C+%22viewWindowMode%22%3Anull%7D&amp;gco_legend=none&amp;gco_fontName=Verdana&amp;gco_title=&amp;gco_titleTextStyle=%7B%22color%22%3A%22%23000%22%2C+%22fontSize%22%3A%2214%22%2C+%22bold%22%3Atrue%2C+%22italic%22%3Afalse%7D&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23b6d7a8%22%2C+%22errorBars%22%3A%7B%22errorType%22%3A%22none%22%7D%7D%7D&amp;att=true&amp;width=1200&amp;height=385"></iframe>
+    
+    <h1>Check out the F&B Outlets offering deals!</h1>
+    <iframe width="1200" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col1%2C+count()+from+1EmZEpPjVy6olbXBz7wHA4B5fUR3xC8ZlamCCtPVk+group+by+col1+order+by+count()+desc+limit+30&amp;viz=GVIZ&amp;t=BAR&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_vAxes=%5B%7B%22title%22%3A%22Outlet+Name%22%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3Anull%2C+%22logScale%22%3Afalse%2C+%22viewWindowMode%22%3Anull%2C+%22titleTextStyle%22%3A%7B%22color%22%3A%22%23741b47%22%2C+%22fontSize%22%3A%2212%22%2C+%22italic%22%3Afalse%7D%2C+%22textStyle%22%3A%7B%22color%22%3A%22%23222%22%2C+%22fontSize%22%3A%227%22%7D%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22logScale%22%3Afalse%7D%5D&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_isStacked=true&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22textStyle%22%3A%7B%22color%22%3A%22%23222%22%2C+%22fontSize%22%3A%228%22%2C+%22italic%22%3Afalse%7D%2C+%22logScale%22%3Afalse%2C+%22formatOptions%22%3A%7B%22source%22%3A%22data%22%2C+%22scaleFactor%22%3Anull%2C+%22prefix%22%3A%22%22%2C+%22suffix%22%3A%22%22%7D%2C+%22gridlines%22%3A%7B%22count%22%3A%22-1%22%7D%2C+%22minorGridlines%22%3A%7B%22count%22%3A%220%22%7D%2C+%22title%22%3A%22No.+of+Deals+shared+on+Outlets%22%2C+%22titleTextStyle%22%3A%7B%22color%22%3A%22%23741b47%22%2C+%22fontSize%22%3A12%2C+%22italic%22%3Afalse%7D%7D&amp;gco_legend=none&amp;gco_title=&amp;gco_series=%7B%220%22%3A%7B%22color%22%3A%22%23b6d7a8%22%2C+%22errorBars%22%3A%7B%22errorType%22%3A%22none%22%7D%7D%7D&amp;gco_legendTextStyle=%7B%22color%22%3A%22%23000000%22%2C+%22fontSize%22%3A%228%22%7D&amp;gco_titleTextStyle=%7B%22color%22%3A%22%23cc0000%22%2C+%22fontSize%22%3A%2214%22%2C+%22bold%22%3Atrue%2C+%22italic%22%3Afalse%7D&amp;gco_domainAxis=%7B%22direction%22%3A1%7D&amp;gco_fontName=Verdana&amp;att=true&amp;width=1200&amp;height=585"></iframe>
+    
+    <h1>Deals Offered by F & B Outlet Concept</h1>
+    <iframe width="800" height="400" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col5%2C+count()+from+1EmZEpPjVy6olbXBz7wHA4B5fUR3xC8ZlamCCtPVk+group+by+col5+order+by+count()+desc+limit+10&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;gco_useFirstColumnAsDomain=true&amp;gco_legacyScatterChartLabels=true&amp;gco_is3D=false&amp;gco_pieHole=0.5&amp;gco_booleanRole=certainty&amp;gco_hAxis=%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D&amp;gco_vAxes=%5B%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%2C%7B%22useFormatFromData%22%3Atrue%2C+%22viewWindow%22%3A%7B%22max%22%3Anull%2C+%22min%22%3Anull%7D%2C+%22minValue%22%3Anull%2C+%22maxValue%22%3Anull%7D%5D&amp;gco_slices=%7B%220%22%3A%7B%22color%22%3A%22%23990000%22%7D%2C+%221%22%3A%7B%22color%22%3A%22%23e06666%22%7D%2C+%222%22%3A%7B%22color%22%3A%22%23ea9999%22%7D%2C+%223%22%3A%7B%22color%22%3A%22%23f4cccc%22%7D%2C+%224%22%3A%7B%22color%22%3A%22%23ead1dc%22%7D%2C+%225%22%3A%7B%22color%22%3A%22%23d9d2e9%22%7D%7D&amp;gco_title=&amp;gco_titleTextStyle=%7B%22color%22%3A%22%23666666%22%2C+%22fontSize%22%3A12%2C+%22bold%22%3Atrue%7D&amp;gco_legendTextStyle=%7B%22color%22%3A%22%23666666%22%2C+%22fontSize%22%3A12%7D&amp;gco_legend=labeled&amp;gco_theme=maximized&amp;gco_pieSliceBorderColor=%23ffffff&amp;att=true&amp;width=800&amp;height=385"></iframe>
+    </div>
+</body>
+
+</html>
